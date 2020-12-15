@@ -3,13 +3,13 @@ version: "3.7"
 services:
 
   server:
-    image: admin-server:latest
+    image: benderbendingrodriges/admin-server:latest
     restart: on-failure
     ports:
       - 9003:9003
 
   client:
-    image: client-service:latest
+    image: benderbendingrodriges/dockertaskrepo:latest
     restart: on-failure
     depends_on:
       - server
